@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from moviepy.editor import ImageSequenceClip
 
-from src.Ray import Ray
+from Ray import Ray
 
 #===========================================================
 class SeismicProfile:

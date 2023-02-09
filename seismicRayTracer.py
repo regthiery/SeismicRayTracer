@@ -3,10 +3,7 @@ import sys
 
 sys.path.append ("src")
 
-
 from Scene import Scene
-
-
 
 #-------------------------------------------------------------------------
 #   Main code
@@ -18,6 +15,10 @@ parser.add_argument('rai', type=int, help="Numéro du rai à calculer", nargs='?
 args = parser.parse_args()
 filename = args.script
 rayIndex = args.rai
+
+print ("Process script{}".format(filename))
+if rayIndex != None:
+    print ("\twith ray index: {}".format(rayIndex))
 
 scene = Scene()
 scene.rayIndex = rayIndex

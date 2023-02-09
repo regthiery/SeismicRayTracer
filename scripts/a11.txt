@@ -23,7 +23,7 @@ ymax	200
 indexFocus	15
 backRaysOnly		# on ne retient que les rais qui remontent à la surface
 hodochrone
-# annotate			# pour annoter les points sur l'hodochrone
+annotate			# pour annoter les points sur l'hodochrone
 
 
 	#-------------------------------------------------------------------------

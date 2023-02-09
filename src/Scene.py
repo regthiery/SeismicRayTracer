@@ -356,7 +356,7 @@ class Scene:
         plt.legend()
         filename = "{}/{}.png".format(self.resImagesFolderPath,self.filename)
         plt.savefig(filename, dpi=300, bbox_inches='tight')
-        plt.show()
+        # plt.show()
         plt.close(self.fig)
 
     def drawProfile(self):
