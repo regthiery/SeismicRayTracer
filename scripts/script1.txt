@@ -1,0 +1,34 @@
+xmin 0
+xmax 4000
+ymin -2500
+ymax	0
+
+ksel	all
+dseg	100
+
+surface
+	0	0
+	40000	33
+	
+interface
+	0 -800
+	40000 -850
+	
+interface
+	0 -1300
+	40000 -1300
+	
+interface
+	0 -1400
+	40000 -1400		
+	
+interface
+	0 -1600
+	40000 -1600
+	
+layer 7000				
+layer 8000				
+layer 9000				
+layer 10500
+layer 15000
+layer 17000								

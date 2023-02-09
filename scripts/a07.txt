@@ -1,0 +1,87 @@
+#=====================================================================================
+#
+# Script de démonstration pour SeismicRayTracer
+#
+#	Modèle simple à deux couches sismiques horizontales:
+#		- Ce programme calcule et dessine les rais réfléchis par le 1er réflecteur
+#		Le réflecteur présente une zone haute créant une zone d'ombre.
+#		- Si l'angle d'incidence est supérieure à l'angle de réfraction,
+#		le programme calcule et dessine les angles réfractés
+#
+#=====================================================================================
+
+	#-------------------------------------------------------------------------
+	# Les limites du profil sismique
+	#-------------------------------------------------------------------------
+
+xmin 	0
+xmax 	4000
+ymin -2500
+ymax	200
+
+	#-------------------------------------------------------------------------
+	# Le foyer est le point d'indice n°10 sur la surface
+	#-------------------------------------------------------------------------
+
+
+indexFocus	10
+backRaysOnly		# on ne retient que les rais qui remontent à la surface
+hodochrone
+annotate			# pour annoter les points sur l'hodochrone
+
+
+	#-------------------------------------------------------------------------
+	# Couleurs et épaisseur de trait des rais
+	#-------------------------------------------------------------------------
+
+incident	black	0.5
+reflected	blue	1
+refracted	red
+
+
+	#-------------------------------------------------------------------------
+	# les interfaces sont découpées en segments de 100 mètres de longueur
+	#-------------------------------------------------------------------------
+
+dseg	100
+showSegments	# pour afficher les points de segmentation
+
+	#-------------------------------------------------------------------------
+	# on calcule un profile sismique sur tous les points de segmentation 
+	# 	de la 1ère interface
+	#-------------------------------------------------------------------------
+
+target	all
+
+
+	#-------------------------------------------------------------------------
+	# Coordonnées des points nodaux de la surface
+	#-------------------------------------------------------------------------
+	
+surface
+	0	  0
+	4000	  0
+	extend 100000 100000
+	
+
+	#-------------------------------------------------------------------------
+	# Coordonnées des points nodaux de la 1ère interface en profondeur
+	#-------------------------------------------------------------------------
+
+interface
+	0 	-700
+	4000	-700
+
+interface
+	0 	-1500
+	4000	-1500
+		
+
+	#-------------------------------------------------------------------------
+	# Définition de la 1ère couche sismique avec une vitesse 
+	#	des ondes de 7000 m/s
+	#-------------------------------------------------------------------------
+	
+layer 7000				
+layer 10000				
+

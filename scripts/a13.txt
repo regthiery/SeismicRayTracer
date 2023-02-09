@@ -1,0 +1,95 @@
+#=====================================================================================
+#
+# Script de démonstration pour SeismicRayTracer
+#
+#	Modèle simple à trois couches sismiques horizontales:
+#=====================================================================================
+
+	#-------------------------------------------------------------------------
+	# Les limites du profil sismique
+	#-------------------------------------------------------------------------
+
+xmin 	0
+xmax 	4000
+ymin -2500
+ymax	200
+
+
+	#-------------------------------------------------------------------------
+	# Le foyer est le point d'indice n°10 sur la surface
+	#-------------------------------------------------------------------------
+
+
+indexFocus	0
+backRaysOnly		# on ne retient que les rais qui remontent à la surface
+hodochrone
+annotate			# pour annoter les points sur l'hodochrone
+
+
+	#-------------------------------------------------------------------------
+	# Couleurs et épaisseur de trait des rais
+	#-------------------------------------------------------------------------
+
+incident	black
+reflected	blue
+refracted	red
+
+
+	#-------------------------------------------------------------------------
+	# les interfaces sont découpées en segments de 100 mètres de longueur
+	#-------------------------------------------------------------------------
+
+dseg	100
+showSegments	# pour afficher les points de segmentation
+
+	#-------------------------------------------------------------------------
+	# on calcule un profile sismique sur tous les points de segmentation 
+	# 	de la 1ère interface
+	#-------------------------------------------------------------------------
+
+target	all
+
+
+	#-------------------------------------------------------------------------
+	# Coordonnées des points nodaux de la surface
+	#-------------------------------------------------------------------------
+	
+surface
+	0	  0
+	4000	  0
+	extend 100000 100000
+	
+
+	#-------------------------------------------------------------------------
+	# Coordonnées des points nodaux de la 1ère interface en profondeur
+	#-------------------------------------------------------------------------
+
+interface
+	0 	-700
+	4000	-650
+	extend 100000 100000
+
+interface
+	0 	-1300
+	4000	-1300
+	extend 100000 100000
+
+interface
+	0 	-1400
+	4000	-1400
+
+interface
+	0 	-1600
+	4000	-1600
+		
+
+	#-------------------------------------------------------------------------
+	# Vitesses des couches sismiques
+	#-------------------------------------------------------------------------
+	
+layer 7000				
+layer 8000				
+layer 13000				
+layer 18000				
+layer 21000				
+
