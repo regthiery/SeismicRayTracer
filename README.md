@@ -11,5 +11,5 @@ Usage
         ./seismicRayTracer filename  rayIndex
         ```
 
-        __filename__ est le nom du script à exécuter. Le scritt est dans le dossier **Scripts**.
+        __filename__ est le nom du script à exécuter. Le script est dans le dossier **Scripts**.
         __rayIndex__ est le numéro de rai sismique à calculer. Ce paramètre est optionnel.
