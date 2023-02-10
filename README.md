@@ -2,7 +2,7 @@ Module SeismicRayTracer
 ===========================
 
 Un module simple pour tracer des rais sismiques à partir des lois de Snell-Descartes
-dans un milieu 2D
+sur une coupe 2D et pour dessiner des hodochrones
 
 Usage
 -------
