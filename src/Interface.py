@@ -51,7 +51,7 @@ class Interface:
         normal[1] = normal[1] / norm
         return normal
 
-        # calcul des normales des segments aux points nodaux
+        # Calcul des normales des segments aux points nodaux
     def calculateNormals(self):
         n = len(self.x)
         if n >=2:
@@ -66,11 +66,8 @@ class Interface:
                 y2 = self.y[i+1]
                 normal = self.calculateNormal (x1,y1,x2,y2)
 
-                theta = np.arctan(normal[1]/normal[0]) if normal[0] > 0 else np.pi / 2
-
                 self.nx0    [i] = normal[0]
                 self.ny0    [i] = normal[1]
-
 
 
         # Fonction pour segmenter la ligne d'interface
@@ -115,6 +112,7 @@ class Interface:
                 else:
                     d0 += dnode
 
+        # Cette fonction recherche à quel segment appartient le point (x,y) ?
     def locateSegment(self,x,y):
         n = len(self.x)
         if n >= 2:

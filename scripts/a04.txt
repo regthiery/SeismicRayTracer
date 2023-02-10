@@ -39,7 +39,7 @@ hodochrone
 	#-------------------------------------------------------------------------
 
 incident	black	0.5
-reflected	blue	2
+reflected	blue	1
 refracted	red
 
 
